@@ -1,6 +1,8 @@
 #This code is used to transform a csv file describing an orbit into a set of images. 
 #It is the THALASSA module concerning with generating synthetic sensor acquisitions. 
 
+#Before running the code, add the target object to the scene, and scale it appropriately. 
+
 #Source data is the path to a .txt document structured as a csv. 
 #The .txt document contains information about the orbit (camera position/attitude), and the Sun.
 #In particular, in this iteration the .txt is structured as follows: 
