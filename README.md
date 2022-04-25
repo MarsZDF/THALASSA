@@ -14,5 +14,6 @@ Filtering
 Decision refers to control actions, which have not been implemented as of now. 
 
 For more information, and for a visual reference, please refer to:
+
 Di Fraia, M. Z., Cuartielles, J. P., Felicetti, L., & Chermak, L. (2021, April). Autonomous Visual Trajectory Reconstruction in the Proximity of Small Celestial Objects. In 7th IAA Planetary Defense Conference (p. 164).
 
