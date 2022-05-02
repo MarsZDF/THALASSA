@@ -1,5 +1,5 @@
-#This utility is used to create a sphere of points with angular spacing of λ1, λ2. 
-#Be careful about which point is which (e.g., in a polar orbit there is a discontinuity) and about the camera reference frame
+%This utility is used to create a sphere of points with angular spacing of λ1, λ2. 
+%Be careful about which point is which (e.g., in a polar orbit there is a discontinuity) and about the camera reference frame
 
 clearvars; close all;
 tic
@@ -75,7 +75,7 @@ for i = 1:u
     Velocities(i,:) = Velocities(i,:)/norm(Velocities(i,:));
 end
 
-#Graphics - use it to check that the acquisition N is where you expect it to be
+%Graphics - use it to check that the acquisition N is where you expect it to be
 plot3(Positions(:,1), Positions(:,2), Positions(:,3),'ko'); 
 axis equal
 for i = 1:u
