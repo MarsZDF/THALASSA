@@ -1,3 +1,6 @@
+#This utility is used to create a sphere of points with angular spacing of λ1, λ2. 
+#Be careful about which point is which (e.g., in a polar orbit there is a discontinuity) and about the camera reference frame
+
 clearvars; close all;
 tic
 %% Constants
@@ -72,11 +75,17 @@ for i = 1:u
     Velocities(i,:) = Velocities(i,:)/norm(Velocities(i,:));
 end
 
+#Graphics - use it to check that the acquisition N is where you expect it to be
 plot3(Positions(:,1), Positions(:,2), Positions(:,3),'ko'); 
 axis equal
+for i = 1:u
+    text(Positions(i,1), Positions(i,2), Positions(i,3),num2str(i),'HorizontalAlignment','left','FontSize',15);
+end
+
+
 
 [XdatagenObs] = [Positions, Velocities];
-Sunn = Om*ones(u,1); 
+Sunn = -Om*ones(u,1); 
 [RotMatrix] = OrieCentCamDynRotm(XdatagenObs);
 Orb2Table(XdatagenObs, Sunn, RotMatrix); 
 toc
